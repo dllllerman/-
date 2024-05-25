@@ -1,0 +1,88 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="ru">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>2</title>
+<style>
+<!--
+p.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	}
+ p.MsoNormal
+	{mso-style-parent:"";
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	margin-left:0cm; margin-right:0cm; margin-top:0cm}
+-->
+</style>
+</head>
+
+<body>
+
+<p class="MsoListParagraph" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 0cm">
+<a name="_Toc371883000"><span style="font-size: 14pt"><b>2</b></span><b><span style="font-size: 14.0pt; line-height: 150%">.<span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7.0pt; font-family: Times New Roman">&nbsp;&nbsp;&nbsp;
+</span>Строковый тип</span></b></a></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 1.0cm; line-height: 150%">
+<span style="font-size: 14.0pt; line-height: 150%">Строка – последовательность 
+символов. Максимальное количество символов в строке (длина строки) - 255. 
+Переменную строкового типа можно определить в разделе определения типов:</span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">Type</span><span style="font-size: 14.0pt; line-height: 150%"> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ИмяТипа = </span>
+<span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">string</span><span style="font-size: 14.0pt; line-height: 150%"> 
+[макс.длина строки];</span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">Var</span><span style="font-size: 14.0pt; line-height: 150%"> 
+&nbsp; Идентификатор : ИмяТипа;</span></p>
+<p class="MsoNormal" style="line-height: 150%">
+<span style="font-size: 14.0pt; line-height: 150%">или в разделе объявления 
+переменных: </span></p>
+<p class="MsoNormal" style="text-indent: 35.4pt; line-height: 150%">
+<span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">Var</span><span style="font-size: 14.0pt; line-height: 150%">&nbsp; 
+Идентификатор : </span>
+<span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">string</span><span style="font-size: 14.0pt; line-height: 150%"> 
+[макс.длина строки];</span></p>
+<p class="MsoNormal" style="text-indent: 35.4pt; line-height: 150%">
+<span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">Var</span><span style="font-size: 14.0pt; line-height: 150%">&nbsp; 
+Идентификатор : </span>
+<span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">string</span><span style="font-size: 14.0pt; line-height: 150%">;</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="font-size: 14.0pt; line-height: 150%">Если максимальная длина 
+строки не указывается, то она равна 255 байт.</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="font-size: 14.0pt; line-height: 150%">Строковые данные могут 
+использоваться в программе и в качестве констант: </span>
+<span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">Const</span><span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">
+</span><span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">Str</span><span style="font-size: 14.0pt; line-height: 150%">_</span><span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">Adres</span><span style="font-size: 14.0pt; line-height: 150%"> 
+= ‘ул. Мира, 35’;</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="font-size: 14.0pt; line-height: 150%">Строка в языке Паскаль 
+трактуется как массив символов. Для строки из </span>
+<span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">n</span><span style="font-size: 14.0pt; line-height: 150%"> 
+символов в памяти отводится </span>
+<span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">n</span><span style="font-size: 14.0pt; line-height: 150%">+1 
+байт; </span><span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">n</span><span style="font-size: 14.0pt; line-height: 150%"> 
+байтов – для хранения символов строки, а один – для значения текущей длины 
+строки. Этот дополнительный байт имеет номер 0, соответственно первый символ 
+строки имеет номер 1, второй – 2 и т.д.</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="font-size: 14.0pt; line-height: 150%">К любому символу в строке 
+можно обратиться как к элементу одномерного массива </span><b>
+<span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">array</span></b><span style="font-size: 14.0pt; line-height: 150%"> 
+[0..</span><span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">n</span><span style="font-size: 14.0pt; line-height: 150%">]
+</span><b><span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">of</span></b><span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">
+</span><b><span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">char</span></b><span style="font-size: 14.0pt; line-height: 150%"> 
+по номеру (индексу) данного символа в строке. В отличие от массивов переменные 
+строкового типа могут участвовать целиком в операторах ввода-вывода.</span></p>
+
+</body>
+
+</html>

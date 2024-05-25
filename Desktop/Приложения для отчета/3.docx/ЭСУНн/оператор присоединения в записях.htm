@@ -1,0 +1,87 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="ru">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>4</title>
+<style>
+<!--
+p.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	}
+ p.MsoNormal
+	{mso-style-parent:"";
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	margin-left:0cm; margin-right:0cm; margin-top:0cm}
+-->
+</style>
+</head>
+
+<body>
+
+<p class="MsoListParagraph" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 0cm">
+<a name="_Toc371883034"><span style="font-size: 14pt"><b>4</b></span><b><span style="font-size: 14.0pt; line-height: 150%">.<span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7.0pt; font-family: Times New Roman">&nbsp;&nbsp;&nbsp;
+</span>Оператор присоединения в записях</span></b></a></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="font-size: 14.0pt; line-height: 150%">Обращение к полям записи 
+имеет несколько громоздкий вид. Для решения этой проблемы в </span>
+<span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">TP</span><span style="font-size: 14.0pt; line-height: 150%"> 
+имеется оператор </span>
+<span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">with</span><span style="font-size: 14.0pt; line-height: 150%">, 
+в виде:</span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">With</span><span style="font-size: 14.0pt; line-height: 150%"> 
+ПеременнаяТипаЗапись </span>
+<span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">do</span><span style="font-size: 14.0pt; line-height: 150%"> 
+Оператор; {обычно составной оператор}</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="font-size: 14.0pt; line-height: 150%">Один раз, указав переменную 
+типа запись в операторе </span>
+<span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">with</span><span style="font-size: 14.0pt; line-height: 150%">, 
+можно работать с именами полей как с обычными переменными.</span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="font-size: 14.0pt; line-height: 150%">Например</span><span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">:</span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">With m do</span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">Begin</span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">number := 1964;</span></p>
+<p class="MsoNormal" style="text-indent: 35.4pt; line-height: 150%; margin-left: 35.4pt">
+<span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">marka :=’Audi - 
+100’;</span></p>
+<p class="MsoNormal" style="text-indent: 35.4pt; line-height: 150%; margin-left: 35.4pt">
+<span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">fio :=’</span><span style="font-size: 14.0pt; line-height: 150%">Федорова</span><span style="font-size: 14.0pt; line-height: 150%">
+</span><span style="font-size: 14.0pt; line-height: 150%">Н</span><span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">.</span><span style="font-size: 14.0pt; line-height: 150%">В</span><span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">.’;</span></p>
+<p class="MsoNormal" style="text-indent: 35.4pt; line-height: 150%; margin-left: 35.4pt">
+<span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">address := ‘</span><span style="font-size: 14.0pt; line-height: 150%">ул</span><span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">.
+</span><span style="font-size: 14.0pt; line-height: 150%">Пушкина</span><span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">, 
+53-73’;</span></p>
+<p class="MsoNormal" style="text-indent: 1.0cm; line-height: 150%">
+<span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">end</span><span style="font-size: 14.0pt; line-height: 150%">;</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="font-size: 14.0pt; line-height: 150%">Как видно из примера, нет 
+необходимости указывать внутри оператора </span>
+<span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">With</span><span style="font-size: 14.0pt; line-height: 150%"> 
+и переменную-запись, и имя поля. Можно указывать лишь имя поля. Оператор </span>
+<span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">With</span><span style="font-size: 14.0pt; line-height: 150%"> 
+особенно полезен, когда приходится манипулировать несколькими полями одной 
+переменной- записи. Но следует помнить, что этот оператор также сокращает 
+ясность программы.</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="font-size: 14.0pt; line-height: 150%">Записи часто используются при 
+работе с динамическими структурами данным и для организации файлов записей на 
+дисках. Записи часто применяются для работы с датами (день, месяц, год) или 
+отрезками времени (часы, минуты, секунды).</span></p>
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>Представление о массиве</title>
+<style>
+<!--
+p.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:36.0pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	}
+-->
+</style>
+</head>
+
+<body>
+
+<p class="MsoListParagraph" style="text-align: justify; text-indent: -22.5pt; line-height: 150%; margin-left: 57.95pt; margin-right: 0cm; margin-top: 0cm; margin-bottom: .0001pt">
+<span style="font-size: 14.0pt; line-height: 150%; font-family: 'Times New Roman',serif"><a href="index.htm">Представление 
+о массиве</a></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-bottom: .0001pt">
+<span style="font-size: 12.0pt; line-height: 150%; font-family: 'Times New Roman',serif">
+Если работа программы связана с хранением и обработкой большого количества 
+однотипных переменных, для их представления в программе можно использовать 
+массивы. Например: пусть программа пользователя выполняет некоторые действия над 
+последовательностью целых чисел, насчитывающей сто элементов, которые требуется 
+сохранять до конца ее работы. Вместо того, чтобы объявлять указанные переменные 
+сто раз, можно один раз объявить целочисленную переменную, состоящую из ста 
+элементов – массив.</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-bottom: .0001pt">
+<span style="font-size: 12.0pt; line-height: 150%; font-family: 'Times New Roman',serif">
+Массив представляет собой совокупность данных одного типа с общим для всех 
+элементов именем. Элементы массива пронумерованы, и обратиться к каждому из них 
+можно по номеру. Номера элементов массива иначе называются индексами, а сами 
+элементы массива – переменные с индексами (индексированные переменные). Данные в 
+массивах сохраняются только до конца работы программы. Для их долговременного 
+хранения программа должна записать данные в файл.</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-bottom: .0001pt">
+<span style="font-size: 12.0pt; line-height: 150%; font-family: 'Times New Roman',serif">
+К характеристикам массива относятся: тип (общий для всех элементов массива), 
+размерность (количество индексов элемента массива), диапазон изменения индексов 
+(определяет количество элементов в массиве).</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-bottom: .0001pt">
+<span style="font-size: 12.0pt; line-height: 150%; font-family: 'Times New Roman',serif">
+В одномерном массиве (векторе) элементы нумеруются одним индексом. Двумерный 
+массив представляет собой таблицу (матрицу), в которой элементы нумеруются двумя 
+индексами – номером строки и столбца, на пересечении которых элемент расположен. 
+В памяти компьютера все элементы массива обязательно занимают одну непрерывную 
+область (массив), отсюда и произошло это название. Двумерные массивы 
+располагаются в памяти по строкам: сначала все элементы первой строки, затем – 
+второй и т.д.</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-bottom: .0001pt">
+<span style="font-size: 12.0pt; line-height: 150%; font-family: 'Times New Roman',serif">
+В качестве индекса (номера) элемента массива используется выражение порядкового 
+типа, наиболее часто индекс – это целая константа или переменная типа integer. 
+При обращении к элементу массива индекс указывается в квадратных скобках после 
+имени массива. Например: a[3], b[2,4]. Массивы ценны тем, что их индексы сами 
+могут быть переменными или выражениями, обеспечивая доступ не к одному, а к 
+последовательности элементов. Обработка массивов производится при изменении 
+индексов элементов.</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-bottom: .0001pt">
+<span style="font-size: 12.0pt; line-height: 150%; font-family: 'Times New Roman',serif">
+Например, следующие переменные удобно применять для просмотра в цикле элементов 
+массива: a[i] – всех элементов массива, a[2*i] – элементов, стоящих на четных 
+местах, a[2*i-1] – элементов, стоящих на нечетных местах.</span></p>
+
+</body>
+
+</html>

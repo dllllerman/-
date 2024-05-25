@@ -1,0 +1,94 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="ru">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>5</title>
+<style>
+<!--
+p.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	}
+ p.MsoNormal
+	{mso-style-parent:"";
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	margin-left:0cm; margin-right:0cm; margin-top:0cm}
+-->
+</style>
+</head>
+
+<body>
+
+<p class="MsoListParagraph" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 0cm">
+<a name="_Toc371883024"><span style="font-size: 14pt"><b>5</b></span><b><span style="font-size: 14.0pt; line-height: 150%">.<span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7.0pt; font-family: Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Текстовые файлы</span></b></a></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">Компонентами текстовых файлов 
+являются символы кодовой таблицы, сформированные в виде последовательности строк 
+произвольной длины, что не позволяет считать их просто набором символов </font>
+</span><span lang="EN-US" style="line-height: 150%"><font size="3">char</font></span><span style="line-height: 150%"><font size="3">.</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">Каждая строка в текстовом файле 
+оканчивается составным символом «конца строки», который является объединением 
+двух символов: символа #13 (</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">CR</font></span><span style="line-height: 150%"><font size="3">) 
+– возврат каретки и символа #10 (</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">LF</font></span><span style="line-height: 150%"><font size="3">) 
+– перевод строки. Для составного символа вводят обозначение </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">eoln</font></span><span style="line-height: 150%"><font size="3"> 
+(</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">End 
+Of Line</font></span><span style="line-height: 150%"><font size="3">). Символ
+</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">eoln</font></span><span style="line-height: 150%"><font size="3"> 
+нельзя присвоить переменной типа </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">char</font></span><span style="line-height: 150%"><font size="3">. 
+Однако его можно сгенерировать при помощи процедур </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">readln</font></span><span style="line-height: 150%"><font size="3">,
+</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">
+writeln</font></span><span style="line-height: 150%"><font size="3"> и 
+распознать функцией </font></span><span lang="EN-US" style="line-height: 150%">
+<font size="3">eoln</font></span><span style="line-height: 150%"><font size="3">.</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">Текстовый файл – это 
+последовательность символов </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">char</font></span><span style="line-height: 150%"><font size="3">, 
+сгруппированных в строки, заканчивающиеся специальным символом </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">eoln</font></span><span style="line-height: 150%"><font size="3">.</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">В конце любого файла, в том числе 
+и текстового, ставится символ #26 (</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">SUB</font></span><span style="line-height: 150%"><font size="3">) 
+– конец файла </font></span><span lang="EN-US" style="line-height: 150%">
+<font size="3">eof</font></span><span style="line-height: 150%"><font size="3"> 
+(</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">End 
+Of File</font></span><span style="line-height: 150%"><font size="3">).</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">Объявление текстовых файлов:</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">Type</font></span><span style="line-height: 150%"><font size="3"> 
+ИмяТипа = </font></span><span lang="EN-US" style="line-height: 150%">
+<font size="3">text</font></span><span style="line-height: 150%"><font size="3">;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">Var</font></span><span style="line-height: 150%"><font size="3"> 
+ФайловаяПеременная : ИмяТипа;</font></span></p>
+<p class="MsoNormal" style="line-height: 150%"><span style="line-height: 150%">
+<font size="3">или</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">Var</font></span><span style="line-height: 150%"><font size="3"> 
+ФайловаяПеременная : </font></span><span lang="EN-US" style="line-height: 150%">
+<font size="3">text</font></span><span style="line-height: 150%"><font size="3">;</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">Длина строк файла может быть 
+различной – от 0 до 255 символов. Позицию конкретной строки в текстовом файле 
+нельзя получить сразу. С файлами текстового типа можно работать только путем 
+последовательного продвижения по файлу, прочитывая или записывая одну строку за 
+другой, начиная с первой. Текстовые файлы являются файлами последовательного 
+доступа.</font></span></p>
+
+</body>
+
+</html>

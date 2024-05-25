@@ -1,0 +1,201 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="ru">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>5</title>
+<style>
+<!--
+p.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	}
+ p.MsoNormal
+	{mso-style-parent:"";
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	margin-left:0cm; margin-right:0cm; margin-top:0cm}
+-->
+</style>
+</head>
+
+<body>
+
+<p class="MsoListParagraph" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 0cm">
+<a name="_Toc371883003"><span style="font-size: 14pt"><b>5</b></span><b><span style="font-size: 14.0pt; line-height: 150%">.<span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7.0pt; font-family: Times New Roman">&nbsp;&nbsp;&nbsp;
+</span>Примеры решения задач</span></b></a></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<b><span style="line-height: 150%"><font size="3">Условие задачи 1</font></span></b><span style="line-height: 150%"><font size="3">. 
+Написать программу, которая запрашивает слово (строку символов) с клавиатуры и 
+выводит на экран его перевертыш.</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">Список переменных: </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">s</font></span><span style="line-height: 150%"><font size="3"> 
+– слово (строка символов), введенное с клавиатуры, </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">sp</font></span><span style="line-height: 150%"><font size="3"> 
+– слово-перевертыш, </font></span><span lang="EN-US" style="line-height: 150%">
+<font size="3">len</font></span><span style="line-height: 150%"><font size="3"> 
+– длина слова </font></span><span lang="EN-US" style="line-height: 150%">
+<font size="3">S</font></span><span style="line-height: 150%"><font size="3"> 
+(количество символов в слове), </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">i</font></span><span style="line-height: 150%"><font size="3"> 
+– порядковый номер символа в строке </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">S</font></span><span style="line-height: 150%"><font size="3">.</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">Для образования 
+строки-перевертыша необходимо перебирать исходную строку по буквам, начиная с 
+последней, и каждую букву присоединять к результирующей строке. Таким образом, 
+для работы со строкой нужно применить циклическую конструкцию (рис. 5.1), удобно 
+использовать цикл с параметром, так как длина исходной строки (количество букв) 
+заранее известна.</font></span></p>
+<p class="MsoNormal" style="text-align: center; text-indent: 35.45pt; line-height: 150%">
+<img border="0" src="при1.gif"></p>
+<p class="MsoNormal" style="text-align: center; text-indent: 35.45pt; line-height: 150%">
+Рисунок 1 - Алгоритм построения перевертыша строки</p>
+<p class="MsoNormal" align="right" style="text-align: right; text-indent: 35.45pt; line-height: 150%">
+<span style="font-size: 14.0pt; line-height: 150%">Листинг 1</span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">program perevert;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">uses crt;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">var s, sp : string; 
+len, i : byte;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">begin</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">write</font></span><span style="line-height: 150%"><font size="3"> 
+('Введите слово&gt;');</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">read</font></span><span style="line-height: 150%"><font size="3"> 
+(</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">S</font></span><span style="line-height: 150%"><font size="3">);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">len</font></span><span style="line-height: 150%"><font size="3">:=</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">length</font></span><span style="line-height: 150%"><font size="3">(</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">s</font></span><span style="line-height: 150%"><font size="3">); 
+//определение длины слова</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span style="line-height: 150%"><font size="3">{формирование перевертыша}</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">sp:=’’;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">for i:=len downto 1 
+do </font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 70.75pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">begin</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 70.75pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">sp:=sp+s[i]; </font>
+</span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 70.75pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">end</font></span><span style="line-height: 150%"><font size="3">;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.3pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">write</font></span><span style="line-height: 150%"><font size="3"> 
+('Слово-перевертыш:', </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">sp</font></span><span style="line-height: 150%"><font size="3">);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.3pt">
+<font size="3">&nbsp;&nbsp;&nbsp; <span lang="en-us">end. </span></font></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.3pt" align="center">
+<img border="0" src="при2.gif"></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.3pt" align="center">
+Рисунок 2 <font size="3">-</font><span style="font-family: 'Times New Roman',serif"><font size="2">Алгоритм 
+обнаружения слов в массиве, начинающихся и заканчивающихся гласной буквой</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<b><span style="line-height: 150%"><font size="3">Условие задачи 2</font></span></b><span style="line-height: 150%"><font size="3">. 
+В массиве из слов (символьных строк), введенных с клавиатуры, подсчитать 
+количество слов, начинающихся и заканчивающихся гласной буквой.</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">Список переменных: </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">maxn</font></span><span style="line-height: 150%"><font size="3"> 
+– максимальное количество слов в массиве, </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">gl</font></span><span style="line-height: 150%"><font size="3"> 
+– строка из гласных букв, </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">s</font></span><span style="line-height: 150%"><font size="3"> 
+– линейный массив из слов, </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">n</font></span><span style="line-height: 150%"><font size="3"> 
+– количество слов массива </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">S</font></span><span style="line-height: 150%"><font size="3">,
+</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">i</font></span><span style="line-height: 150%"><font size="3"> 
+– номер слова в массиве </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">S</font></span><span style="line-height: 150%"><font size="3">,
+</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">len</font></span><span style="line-height: 150%"><font size="3"> 
+– длина отдельного слова, </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">k</font></span><span style="line-height: 150%"><font size="3"> 
+– количество слов, которые начинаются и заканчиваются гласной буквой.</font></span></p>
+<p class="MsoNormal" align="right" style="text-align: right; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="4">Листинг</font></span><span lang="EN-US" style="line-height: 150%"><font size="4"> 
+2</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">program glasn;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">uses crt;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">const maxn = 100; gl 
+= ’</font></span><span style="line-height: 150%"><font size="3">аоиуеыэюяАОИУЕЫЭЮЯ</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">’;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">var&nbsp;&nbsp;&nbsp; s: array 
+[1..maxn] of string;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">len, n, i, k : 
+integer;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">begin</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">{Заполнение массива словами с 
+клавиатуры}</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">write</font></span><span style="line-height: 150%"><font size="3"> 
+('Введите количество слов массива-&gt;');</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">read</font></span><span style="line-height: 150%"><font size="3"> 
+(</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">n</font></span><span style="line-height: 150%"><font size="3">);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">writeln ('Введите элементы 
+массива s (набор слов)');</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">for i:=1 to n do 
+read (s[i]);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">{Обработка массива, поиск слов в 
+соответствии с заданием}</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">k</font></span><span style="line-height: 150%"><font size="3">:=0;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">writeln</font></span><span style="line-height: 150%"><font size="3">(‘Слова 
+начинающиеся и заканчивающиеся гласной буквой:’);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">for i:=1 to n do</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">begin</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">len:= length (s[i]);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">if (pos(s[i][1],gl) 
+&gt; 0)and (pos(s[i][len],gl) &gt; 0)then</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 70.75pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">begin </font></span>
+</p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 70.75pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">k:=k+1;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 70.75pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">writeln(s[i])&nbsp;&nbsp;
+</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 70.75pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">end</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.3pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">end;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">writeln ('</font></span><span style="line-height: 150%"><font size="3">Всего 
+слов</font></span><span lang="EN-US" style="line-height: 150%"><font size="3"> 
+-&gt; ', k);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">end</font></span><span style="line-height: 150%"><font size="3">.</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.3pt" align="center">&nbsp;</p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.3pt">&nbsp;</p>
+
+</body>
+
+</html>

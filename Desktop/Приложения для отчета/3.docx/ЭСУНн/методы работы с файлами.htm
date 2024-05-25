@@ -1,0 +1,247 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="ru">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>6</title>
+<style>
+<!--
+p.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	}
+ p.MsoNormal
+	{mso-style-parent:"";
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	margin-left:0cm; margin-right:0cm; margin-top:0cm}
+p.MsoListParagraphCxSpFirst
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	}
+p.MsoListParagraphCxSpMiddle
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	}
+p.MsoListParagraphCxSpLast
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	}
+-->
+</style>
+</head>
+
+<body>
+
+<p class="MsoListParagraph" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 0cm">
+<a name="_Toc371883025"><span style="font-size: 14pt"><b>6</b></span><b><span style="font-size: 14.0pt; line-height: 150%">.<span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7.0pt; font-family: Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Методы работы с текстовыми файлами</span></b></a></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">Открытие текстового файла можно 
+произвести тремя способами. Два из них являются стандартными: </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">reset</font></span><span style="line-height: 150%"><font size="3"> 
+(для чтения) и </font></span><span lang="EN-US" style="line-height: 150%">
+<font size="3">rewrite</font></span><span style="line-height: 150%"><font size="3"> 
+(перезаписывает их). Новая процедура </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">append</font></span><span style="line-height: 150%"><font size="3"> 
+позволяет их дополнять.</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">Процедура </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">append</font></span><span style="line-height: 150%"><font size="3"> 
+( ФайловаяПеременная) открывает существующий файл для дозаписи. Указатель 
+ставится не в начало, а в конец файла, куда и будут дописываться новые 
+компоненты. Процедура </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">append</font></span><span style="line-height: 150%"><font size="3"> 
+применима только к текстовым файлам. Если файл ранее был уже открыт с помощью
+</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">reset</font></span><span style="line-height: 150%"><font size="3"> 
+или </font></span><span lang="EN-US" style="line-height: 150%"><font size="3">
+rewrite</font></span><span style="line-height: 150%"><font size="3">, 
+использование </font></span><span lang="EN-US" style="line-height: 150%">
+<font size="3">append</font></span><span style="line-height: 150%"><font size="3"> 
+приведет к закрытию этого файла и открытию его вновь, но уже для добавления 
+элементов. После обращения к </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">append</font></span><span style="line-height: 150%"><font size="3"> 
+текстовый файл доступен только по записи, и функция </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">eof</font></span><span style="line-height: 150%"><font size="3"> 
+всегда принимает значение </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">true</font></span><span style="line-height: 150%"><font size="3">. 
+После вызова </font></span><span lang="EN-US" style="line-height: 150%">
+<font size="3">reset</font></span><span style="line-height: 150%"><font size="3"> 
+или </font></span><span lang="EN-US" style="line-height: 150%"><font size="3">
+rewrite</font></span><span style="line-height: 150%"><font size="3"> функция
+</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">eof</font></span><span style="line-height: 150%"><font size="3"> 
+принимает значение </font></span><span lang="EN-US" style="line-height: 150%">
+<font size="3">true</font></span><span style="line-height: 150%"><font size="3">, 
+только если файл пуст, иначе </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">false</font></span><span style="line-height: 150%"><font size="3">.</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">Процедуры чтения:</font></span></p>
+<p class="MsoNormal" style="text-align: justify; line-height: 150%; margin-left: 35.45pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">read</font></span><span style="line-height: 150%"><font size="3"> 
+(ФайловаяПеременная, x1, x2, … , </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">xN</font></span><span style="line-height: 150%"><font size="3">);</font></span></p>
+<p class="MsoNormal" style="text-align: justify; line-height: 150%; margin-left: 35.45pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">readln</font></span><span style="line-height: 150%"><font size="3"> 
+(ФайловаяПеременная);</font></span></p>
+<p class="MsoNormal" style="text-align: justify; line-height: 150%; margin-left: 35.45pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">readln</font></span><span style="line-height: 150%"><font size="3"> 
+(ФайловаяПеременная, </font></span><span lang="EN-US" style="line-height: 150%">
+<font size="3">x</font></span><span style="line-height: 150%"><font size="3">1,
+</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">x</font></span><span style="line-height: 150%"><font size="3">2, 
+… , </font></span><span lang="EN-US" style="line-height: 150%"><font size="3">xN</font></span><span style="line-height: 150%"><font size="3">);</font></span></p>
+<p class="MsoNormal" style="text-align: justify; line-height: 150%">
+<span style="line-height: 150%"><font size="3">где </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">x</font></span><span style="line-height: 150%"><font size="3">1,
+</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">x</font></span><span style="line-height: 150%"><font size="3">2, 
+…, </font></span><span lang="EN-US" style="line-height: 150%"><font size="3">xN</font></span><span style="line-height: 150%"><font size="3"> 
+– список ввода, содержащий имена переменных разных типов, значения которых 
+процедура </font></span><span lang="EN-US" style="line-height: 150%">
+<font size="3">read</font></span><span style="line-height: 150%"><font size="3"> 
+считывает из текстового файла, начиная чтение с элемента, на который установлен 
+текущий указатель. Файловая переменная имеет тип </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">text</font></span><span style="line-height: 150%"><font size="3">. 
+Процедура </font></span><span lang="EN-US" style="line-height: 150%">
+<font size="3">readln</font></span><span style="line-height: 150%"><font size="3"> 
+выполняет те же действия, что и </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">read</font></span><span style="line-height: 150%"><font size="3">, 
+и дополнительно – переход к новой строке.</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">Вызов </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">readln</font></span><span style="line-height: 150%"><font size="3">&nbsp;(ФайловаяПеременная) 
+без параметров приводит к перемещению текущей позиции файла на начало следующей 
+строки. Так можно пропускать строки при чтении из текстового файла. Процедура
+</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">read</font></span><span style="line-height: 150%"><font size="3"> 
+не делает после считывания пропуск до следующей строки. Поэтому она непригодна 
+для чтения последовательности строк, поскольку при этом невозможно продвинуться 
+дальше первой строки. Таким образом, для чтения из файла следующих друг за 
+другом строк текста необходимо использовать </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">readln</font></span><span style="line-height: 150%"><font size="3">.</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">Процедуры записи:</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">write</font></span><span style="line-height: 150%"><font size="3"> 
+(ФайловаяПеременная, </font></span><span lang="EN-US" style="line-height: 150%">
+<font size="3">y</font></span><span style="line-height: 150%"><font size="3">1,
+</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">y</font></span><span style="line-height: 150%"><font size="3">2, 
+… , </font></span><span lang="EN-US" style="line-height: 150%"><font size="3">yN</font></span><span style="line-height: 150%"><font size="3">);</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">writeln</font></span><span style="line-height: 150%"><font size="3"> 
+(ФайловаяПеременная);</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">writeln</font></span><span style="line-height: 150%"><font size="3"> 
+(ФайловаяПеременная, </font></span><span lang="EN-US" style="line-height: 150%">
+<font size="3">y</font></span><span style="line-height: 150%"><font size="3">1,
+</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">y</font></span><span style="line-height: 150%"><font size="3">2, 
+… , </font></span><span lang="EN-US" style="line-height: 150%"><font size="3">yN</font></span><span style="line-height: 150%"><font size="3">);</font></span></p>
+<p class="MsoNormal" style="text-align: justify; line-height: 150%">
+<span style="line-height: 150%"><font size="3">где </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">y</font></span><span style="line-height: 150%"><font size="3">1,
+</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">y</font></span><span style="line-height: 150%"><font size="3">2, 
+… , </font></span><span lang="EN-US" style="line-height: 150%"><font size="3">yN</font></span><span style="line-height: 150%"><font size="3"> 
+– список вывода, содержащий выводимые выражения разных типов, значения которых 
+должны быть записаны в файл, начиная с позиции текущего указателя. Возможно 
+использование формата вывода. Файл должен быть открыт для вывода. Процедура
+</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">
+writeln</font></span><span style="line-height: 150%"><font size="3"> выполняет 
+те же действия, что и </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">write</font></span><span style="line-height: 150%"><font size="3">, 
+и дополнительно вставляет признак конца строки </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">eoln</font></span><span style="line-height: 150%"><font size="3">.</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">Особенность использования 
+текстовых файлов состоит в том, что процедуры чтения и записи разрешают работать 
+со значениями различных типов. Последовательность символов, прочитанная из 
+файла, автоматически преобразуется к значению того типа переменной, которая 
+используется в списке ввода </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">read</font></span><span style="line-height: 150%"><font size="3">. 
+При записи в файл происходит автоматическое преобразование значений переменных 
+списка вывода </font></span><span lang="EN-US" style="line-height: 150%">
+<font size="3">write</font></span><span style="line-height: 150%"><font size="3"> 
+к символьному виду.</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">Например, в следующем фрагменте 
+кода:</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">var f1:text; a, b, c 
+:real;</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">. . .</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">readln(f1, a, b, c);</font></span></p>
+<p class="MsoNormal" style="text-align: justify; line-height: 150%">
+<span style="line-height: 150%"><font size="3">процедура </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">readln</font></span><span style="line-height: 150%"><font size="3"> 
+выполняет чтение из очередной строки внешнего файла, связанного с файловой 
+переменной </font></span><span lang="EN-US" style="line-height: 150%">
+<font size="3">f</font></span><span style="line-height: 150%"><font size="3">1, 
+последовательности цифр, затем интерпретируемой как три вещественных числа, 
+значения которых будут присвоены переменным </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">a</font></span><span style="line-height: 150%"><font size="3">,
+</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">b</font></span><span style="line-height: 150%"><font size="3">,
+</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">c</font></span><span style="line-height: 150%"><font size="3">. 
+В случае, если вместо последовательности чисел в файле содержится любая другая 
+последовательность символов, возникает ошибка ввода/вывода. Считывание значений 
+символьного и строкового типа из текстовых файлов – более безопасная операция, 
+чем чтение данных числового типа.</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">Функции проверки конца строки и 
+файла:</font></span></p>
+<p class="MsoListParagraphCxSpFirst" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 0cm">
+<font size="3"><span style="line-height: 150%; font-family: Symbol">·</span></font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-family: Times New Roman; line-height: 150%"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">Eof</font></span><span style="line-height: 150%"><font size="3">&nbsp;(ФайловаяПеременная), 
+принимает значение </font></span><span lang="EN-US" style="line-height: 150%">
+<font size="3">true</font></span><span style="line-height: 150%"><font size="3">, 
+если файл исчерпан (конец файла);</font></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 0cm">
+<font size="3"><span style="line-height: 150%; font-family: Symbol">·</span></font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-family: Times New Roman; line-height: 150%"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">Eoln</font></span><span style="line-height: 150%"><font size="3">&nbsp;(ФайловаяПеременная), 
+принимает значение </font></span><span lang="EN-US" style="line-height: 150%">
+<font size="3">true</font></span><span style="line-height: 150%"><font size="3">, 
+если указатель текущей позиции находится на маркере конца строки.</font></span></p>
+<p class="MsoListParagraphCxSpMiddle" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 0cm">
+<font size="3"><span style="line-height: 150%; font-family: Symbol">·</span></font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-family: Times New Roman; line-height: 150%"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">
+Seekeoln</font></span><span style="line-height: 150%"><font size="3">&nbsp;(ФайловаяПеременная) 
+аналогична функции </font></span><span lang="EN-US" style="line-height: 150%">
+<font size="3">eoln</font></span><span style="line-height: 150%"><font size="3">, 
+но пропускает пробелы и позиции табуляции перед проверкой на конец строки.</font></span></p>
+<p class="MsoListParagraphCxSpLast" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 0cm">
+<font size="3"><span style="line-height: 150%; font-family: Symbol">·</span></font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-family: Times New Roman; line-height: 150%"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">
+Seekeof</font></span><span style="line-height: 150%"><font size="3">&nbsp;(ФайловаяПеременная) 
+аналогична </font></span><span lang="EN-US" style="line-height: 150%">
+<font size="3">eof</font></span><span style="line-height: 150%"><font size="3">, 
+но пропускает пробелы, позиции табуляции и маркеры конца строки перед проверкой 
+на конец файла.</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">Функции </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">seekeof</font></span><span style="line-height: 150%"><font size="3"> 
+и </font></span><span lang="EN-US" style="line-height: 150%"><font size="3">
+seekeoln</font></span><span style="line-height: 150%"><font size="3"> удобно 
+использовать при чтении числовых данных из текстового файла, когда необходимо 
+пропустить разделяющие числа пробелы или знаки табуляции.</font></span></p>
+
+</body>
+
+</html>

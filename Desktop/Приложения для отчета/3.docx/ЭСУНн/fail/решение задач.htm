@@ -1,0 +1,693 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="ru">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>9</title>
+<style>
+<!--
+p.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	}
+ p.MsoNormal
+	{mso-style-parent:"";
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	margin-left:0cm; margin-right:0cm; margin-top:0cm}
+-->
+</style>
+</head>
+
+<body>
+
+<p class="MsoListParagraph" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 0cm">
+<a name="_Toc371883028"><span style="font-size: 14pt"><b>9</b></span><b><span style="font-size: 14.0pt; line-height: 150%">.<span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7.0pt; font-family: Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Примеры решения задач</span></b></a></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; text-autospace: none">
+<b><span style="line-height: 150%"><font size="3">Условие задачи 1. </font>
+</span></b><span style="line-height: 150%"><font size="3">Создадим текстовый 
+файл с именем </font></span><span lang="EN-US" style="line-height: 150%">
+<font size="3">file</font></span><span style="line-height: 150%"><font size="3">01.</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">txt</font></span><span style="line-height: 150%"><font size="3">, 
+содержащий одну строку текста, которая записывается в него в виде текстовой 
+константы. </font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; text-autospace: none">
+<span style="line-height: 150%"><font size="3">Список переменных: </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">f</font></span><span style="line-height: 150%"><font size="3"> 
+– файловая переменная, </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">st</font></span><span style="line-height: 150%"><font size="3"> 
+– строка, прочитанная из текстового файла.</font></span></p>
+<p class="MsoNormal" align="right" style="text-align: right; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="4">Листинг</font></span><span lang="EN-US" style="line-height: 150%"><font size="4"> 
+1</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">program text_file_1;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">var f:text; 
+st:string;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">begin</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">assign(f,'file01.txt');</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">rewrite</font></span><span style="line-height: 150%"><font size="3">(</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">f</font></span><span style="line-height: 150%"><font size="3">);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span style="line-height: 150%"><font size="3">writeln(f,'Этот текстовый файл 
+содержит строку текста');</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">close(f);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">assign(f,'file01.txt');
+</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">reset(f);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">readln(f,st);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">close</font></span><span style="line-height: 150%"><font size="3">(</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">f</font></span><span style="line-height: 150%"><font size="3">);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span style="line-height: 150%"><font size="3">writeln('Проверка ввода/вывода в 
+файл:');</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span style="line-height: 150%"><font size="3">writeln(st);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">end.</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<b><span style="line-height: 150%"><font size="3">Условие задачи 2.</font></span></b><span style="line-height: 150%"><font size="3"> 
+Составить программу, которая заполняет текстовый файл </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">file</font></span><span style="line-height: 150%"><font size="3">.</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">txt</font></span><span style="line-height: 150%"><font size="3"> 
+набором строк с клавиатуры, выводит его содержимое на экран, подсчитывает 
+количество символов и строк в данном текстовом файле.</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; text-autospace: none">
+<span style="line-height: 150%"><font size="3">Список переменных: </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">f</font></span><span style="line-height: 150%"><font size="3"> 
+– файловая переменная, </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">stroka</font></span><span style="line-height: 150%"><font size="3"> 
+– буферная переменная для временного хранения строк, </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">sumstr</font></span><span style="line-height: 150%"><font size="3"> 
+– количество строк, </font></span><span lang="EN-US" style="line-height: 150%">
+<font size="3">sumchr</font></span><span style="line-height: 150%"><font size="3"> 
+– количество символов.</font></span></p>
+<p class="MsoNormal" align="right" style="text-align: right; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="4">Листинг</font></span><span lang="EN-US" style="line-height: 150%"><font size="4"> 
+2</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">program text_file_2;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">const sumstr:word=0;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">sumchr:word=0;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">var f:text;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">stroka</font></span><span style="line-height: 150%"><font size="3">:</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">string</font></span><span style="line-height: 150%"><font size="3">;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">begin</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">writeln('Введите текст из строк, 
+ввод закончите символом #');</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">assign(f,'file.txt'); </font>
+</span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">{Создание текстового файла, 
+запись в него набора строк с клавиатуры}</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">rewrite(f);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">repeat</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">readln(stroka);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">if (stroka&lt;&gt;'#') 
+then writeln(f,stroka); {</font></span><span style="line-height: 150%"><font size="3">запись 
+строки в файл</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">}</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">until stroka='#';</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">close(f);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">{открытие, вывод и обработка 
+файла}</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">reset(f);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">writeln('</font></span><span style="line-height: 150%"><font size="3">Файл 
+содержит</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">:');</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">while not eof(f) do</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">begin</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">readln(f,stroka);&nbsp;&nbsp; 
+{</font></span><span style="line-height: 150%"><font size="3">чтение строки из 
+файла</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">}</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">writeln(stroka);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">inc(sumstr);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+{</font></span><span style="line-height: 150%"><font size="3">подсчет числа 
+строк</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">}</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">
+inc(sumchr,length(stroka)); {</font></span><span style="line-height: 150%"><font size="3">подсчет 
+числа символов</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">}
+</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">end;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">writeln('</font></span><span style="line-height: 150%"><font size="3">В 
+файле</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">:
+</font></span><span style="line-height: 150%"><font size="3">строк</font></span><span lang="EN-US" style="line-height: 150%"><font size="3"> 
+- ', sumstr,' </font></span><span style="line-height: 150%"><font size="3">
+символов</font></span><span lang="EN-US" style="line-height: 150%"><font size="3"> 
+- ', sumchr);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">close(f);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">end.</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<b><span style="line-height: 150%"><font size="3">Условие задачи 3.</font></span></b><span style="line-height: 150%"><font size="3"> 
+Составить программу, которая находит в существующем текстовом файле все строки, 
+содержащие набор символов, введенных с клавиатуры. Результат поиска выводится на 
+экран и одновременно записывается в файл с именем </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">analysis</font></span><span style="line-height: 150%"><font size="3">.</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">txt</font></span><span style="line-height: 150%"><font size="3">.</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; text-autospace: none">
+<span style="line-height: 150%"><font size="3">Список переменных: </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">f</font></span><span style="line-height: 150%"><font size="3">1 
+– файловая переменная (обрабатываемый файл), </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">f</font></span><span style="line-height: 150%"><font size="3">2 
+– файловая переменная (результирующий файл), </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">name</font></span><span style="line-height: 150%"><font size="3"> 
+– имя исходного файла, </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">stroka</font></span><span style="line-height: 150%"><font size="3"> 
+– буферная переменная для временного хранения строк, </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">s</font></span><span style="line-height: 150%"><font size="3"> 
+– набор символов для поиска в строках исходного файла.</font></span></p>
+<p class="MsoNormal" align="right" style="text-align: right; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="4">Листинг</font></span><span lang="EN-US" style="line-height: 150%"><font size="4"> 
+3</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">program text_file_3;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">var f1,f2:text; 
+name,stroka,s:string[80];</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">begin</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">write('</font></span><span style="line-height: 150%"><font size="3">Введите 
+имя файла</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">:'); 
+read(name);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">write('Введите строку поиска:');read(s);
+</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">{связываем f1, f2 с именами 
+файлов}</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">
+assign(f1,name+’.txt’); assign(f2,'analysis.txt');</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">{</font></span><span style="line-height: 150%"><font size="3">открываем</font></span><span lang="EN-US" style="line-height: 150%"><font size="3"> 
+f1, </font></span><span style="line-height: 150%"><font size="3">создаем</font></span><span lang="EN-US" style="line-height: 150%"><font size="3"> 
+f2}</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">reset(f1); 
+rewrite(f2);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">writeln('Протокол поиска:'); 
+writeln(f2, 'Протокол поиска:');</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">{пока не конец файла f1, 
+выполняем цикл}</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">while not eof(f1) do</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">begin</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">readln(f1,stroka); {</font></span><span style="line-height: 150%"><font size="3">читаем 
+строку из файла </font><span lang="EN-US"><font size="3">f1 </font></span>
+<font size="3">в </font><span lang="EN-US"><font size="3">stroka}</font></span></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">if pos(s,stroka) &gt; 0 
+then</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 70.75pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">begin</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 70.75pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">inc(sum);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 70.75pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">writeln(stroka);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+{</font></span><span style="line-height: 150%"><font size="3">вывод строки на 
+экран</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">}</font><b><font size="3">
+</font></b></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 70.75pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">
+writeln(f2,stroka);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>&nbsp;</b>{</font></span><span style="line-height: 150%"><font size="3">вывод 
+строки в файл</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">}</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 70.75pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">end;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.3pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">end; </font></span>
+</p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">{</font></span><span style="line-height: 150%"><font size="3">закрываем 
+файлы</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">}</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">close(f1); 
+close(f2); </font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">end.</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; background: white">
+<b><span style="line-height: 150%"><font size="3">Условие задачи 4</font></span></b><span style="line-height: 150%"><font size="3">. 
+Добавление строк с клавиатуры в начало существующего текстового файла.</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; text-autospace: none">
+<span style="line-height: 150%"><font size="3">Список переменных: </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">f</font></span><span style="line-height: 150%"><font size="3"> 
+– файловая переменная (исходный текстовый файл), </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">ft</font></span><span style="line-height: 150%"><font size="3"> 
+– файловая переменная (временный текстовый файл), </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">name</font></span><span style="line-height: 150%"><font size="3"> 
+– имя исходного файла, </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">buf</font></span><span style="line-height: 150%"><font size="3"> 
+– буферная переменная для временного хранения строк.</font></span></p>
+<p class="MsoNormal" align="right" style="text-align: right; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="4">Листинг</font></span><span lang="EN-US" style="line-height: 150%"><font size="4"> 
+4</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">program Title;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">var ft,f:text;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">buf</font></span><span style="line-height: 150%"><font size="3">:</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">string</font></span><span style="line-height: 150%"><font size="3">;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">name</font></span><span style="line-height: 150%"><font size="3">:</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">string</font></span><span style="line-height: 150%"><font size="3">;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">begin</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">{Запись текста с клавиатуры во 
+временный файл на диск}</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">assign(ft,'tmp.txt'); 
+rewrite(ft);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">writeln('Вводите текст для 
+записи.Окончание - Enter');</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">repeat</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">write('-&gt;'); 
+read(buf); writeln(ft,buf); </font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">until buf='';</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">close(ft); writeln('</font></span><span style="line-height: 150%"><font size="3">Ввод 
+окончен</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">');</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">writeln('Введите имя файла для 
+добавления'); </font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">read(name);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">{Добавление строк из исходного 
+файла в конец временного файла}</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">assign(ft,'tmp.txt'); 
+append(ft);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">assign(f,name+’.txt’); 
+reset(f);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">while not eof(f) do</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">begin</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">readln(f,buf);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">if buf &lt;&gt; '' then 
+writeln(ft,buf); </font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">end;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">close(f); close(ft);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">{Удаляем исходный файл и 
+переименовываем временный}</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">erase(f); 
+rename(ft,name+’.txt’);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">e</font></span><span style="line-height: 150%"><font size="3">nd.</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">Пояснение к коду: создается новый 
+временный файл </font></span><span lang="EN-US" style="line-height: 150%">
+<font size="3">tmp</font></span><span style="line-height: 150%"><font size="3">.</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">txt</font></span><span style="line-height: 150%"><font size="3">, 
+в него записываются данные, которые необходимо разместить в начале существующего 
+файла </font></span><span lang="EN-US" style="line-height: 150%"><font size="3">
+name</font></span><span style="line-height: 150%"><font size="3">. Файл с именем
+</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">name</font></span><span style="line-height: 150%"><font size="3"> 
+открывается для чтения. Для дозаписи в конец при помощи </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">append</font></span><span style="line-height: 150%"><font size="3"> 
+открывается файл </font></span><span lang="EN-US" style="line-height: 150%">
+<font size="3">tmp</font></span><span style="line-height: 150%"><font size="3">.</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">txt</font></span><span style="line-height: 150%"><font size="3">. 
+В цикле происходит чтение файла </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">name</font></span><span style="line-height: 150%"><font size="3"> 
+и дозаписывание файла </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">tmp</font></span><span style="line-height: 150%"><font size="3">.</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">txt</font></span><span style="line-height: 150%"><font size="3"> 
+строка за строкой. Затем происходит удаление файла </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">name</font></span><span style="line-height: 150%"><font size="3">, 
+а </font></span><span lang="EN-US" style="line-height: 150%"><font size="3">tmp</font></span><span style="line-height: 150%"><font size="3">.</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">txt</font></span><span style="line-height: 150%"><font size="3"> 
+переименовывается в </font></span><span lang="EN-US" style="line-height: 150%">
+<font size="3">name</font></span><span style="line-height: 150%"><font size="3">.</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<b><span style="line-height: 150%"><font size="3">Условие задачи 5</font></span></b><span style="line-height: 150%"><font size="3">. 
+Создать в текущей папке типизированный файл, имя которого предварительно 
+запросить с клавиатуры. Записать в него </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">n</font></span><span style="line-height: 150%"><font size="3"> 
+чисел.</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">Список переменных: </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">f</font></span><span style="line-height: 150%"><font size="3"> 
+– файловая переменная, </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">buf</font></span><span style="line-height: 150%"><font size="3"> 
+– буферная переменная для временного хранения чисел, </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">name</font></span><span style="line-height: 150%"><font size="3"> 
+– имя файла, </font></span><span lang="EN-US" style="line-height: 150%">
+<font size="3">i</font></span><span style="line-height: 150%"><font size="3"> – 
+счетчик чисел.</font></span></p>
+<p class="MsoNormal" align="right" style="text-align: right; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="4">Листинг</font></span><span lang="EN-US" style="line-height: 150%"><font size="4"> 
+5</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">program Tip_File_1;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">uses crt;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">const n=10;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">var&nbsp;&nbsp;&nbsp; f:file of 
+integer; buf:integer; name:string; i:byte;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">begin</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">//подготовка файла к работе</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">write</font></span><span style="line-height: 150%"><font size="3">('Имя 
+файла:');</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">read</font></span><span style="line-height: 150%"><font size="3">(</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">name</font></span><span style="line-height: 150%"><font size="3">);//запрос 
+имени файла с клавиатуры</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">assign(f,name+'.dat');&nbsp;&nbsp;&nbsp; //связь 
+файла с файловой переменной</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">rewrite(f);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+//создание файла</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">//запись в файл n чисел</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">writeln('Введите ',n,'чисел для 
+записи в файл:');</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">for i:=1 to n do</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">begin</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">read(buf); {buf:=random(100)-</font></span><span style="line-height: 150%"><font size="3">Случайные 
+числа</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">}</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span style="line-height: 150%"><font size="3">write(f,buf)</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span style="line-height: 150%"><font size="3">end;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">writeln('Запись в файл 
+завершена!!!');</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">//закрытие файла</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">close(f)</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">end.</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<b><span style="line-height: 150%"><font size="3">Условие задачи 6</font></span></b><span style="line-height: 150%"><font size="3">. 
+Создать типизированный файл. Записать в него набор целых чисел, окончание записи 
+– введенный 0.</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">Список переменных: </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">f</font></span><span style="line-height: 150%"><font size="3"> 
+– файловая переменная, </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">buf</font></span><span style="line-height: 150%"><font size="3"> 
+– буферная переменная для временного хранения чисел, </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">name</font></span><span style="line-height: 150%"><font size="3"> 
+– имя файла.</font></span></p>
+<p class="MsoNormal" align="right" style="text-align: right; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="4">Листинг</font></span><span lang="EN-US" style="line-height: 150%"><font size="4"> 
+6</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">program Tip_File_2;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">uses crt;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">var&nbsp;&nbsp;&nbsp; f:file of 
+integer; buf:integer; name:string;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">begin</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">write('</font></span><span style="line-height: 150%"><font size="3">Имя 
+файла</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">:');</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">read(name);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">assign(f,name+'.dat');</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">rewrite(f);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">//запись в файл чисел с 
+клавиатуры до введенного 0</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">writeln('Введите числа для записи 
+в файл (окончание ввода - 0):');</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">repeat</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">read(buf);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">if buf&lt;&gt;0 then 
+write(f,buf)</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">until buf=0;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">writeln('Запись в файл 
+завершена!!!');</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">close(f)</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">end.</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<b><span style="line-height: 150%"><font size="3">Условие задачи 7. </font>
+</span></b><span style="line-height: 150%"><font size="3">Чтение содержимого 
+файла целых чисел и вывод его на экран.</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">Список переменных: </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">f</font></span><span style="line-height: 150%"><font size="3"> 
+– файловая переменная, </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">buf</font></span><span style="line-height: 150%"><font size="3"> 
+– буферная переменная для временного хранения чисел, </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">name</font></span><span style="line-height: 150%"><font size="3"> 
+– имя файла.</font></span></p>
+<p class="MsoNormal" align="right" style="text-align: right; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="4">Листинг</font></span><span lang="EN-US" style="line-height: 150%"><font size="4"> 
+7</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">program Tip_File_3;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">uses crt;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">var f:file of 
+integer; buf:integer; name:string; i,n:byte;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">begin</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">write('</font></span><span style="line-height: 150%"><font size="3">Имя 
+файла</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">:'); 
+read(name);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">assign(f,name+'.dat'); 
+reset(f);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">n:=filesize(f);&nbsp;&nbsp;&nbsp;&nbsp; //определение 
+размера файла</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">writeln('В файле ',name,'.dat 
+содержится ',n,' элементов');</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">//чтение первого элемента</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">read(f,buf);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">writeln('1-й элемент = ',buf);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">//чтение пятого элемента</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">seek(f,4); 
+read(f,buf);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">writeln('5-й элемент = ',buf);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">//чтение последнего элемента</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">seek(f,n-1); 
+read(f,buf);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">writeln('последний элемент = ',buf);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">//Чтение предпоследнего элемента</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">seek(f,n-2); 
+read(f,buf);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">writeln('предпоследний элемент = 
+',buf);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">//вывод всего содержимого файла 
+1-й способ</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">reset(f);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">writeln('</font></span><span style="line-height: 150%"><font size="3">Содержимое 
+файла</font></span><span lang="EN-US" style="line-height: 150%"><font size="3"> 
+',name,'.dat:');</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">while not eof(f) do</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">begin</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">read(f,buf);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">write(buf:5)</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">end</font></span><span style="line-height: 150%"><font size="3">;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">writeln</font></span><span style="line-height: 150%"><font size="3">;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">//вывод всего содержимого файла 
+2-й способ</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">reset(f);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">writeln('</font></span><span style="line-height: 150%"><font size="3">Содержимое 
+файла</font></span><span lang="EN-US" style="line-height: 150%"><font size="3"> 
+',name,'.dat:');</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">for i:=0 to 
+filesize(f)-1 do</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">begin</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">read(f,buf);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">write(buf:5)</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">end;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">close(f)</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">end.</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<b><span style="line-height: 150%"><font size="3">Условие задачи </font>
+<span lang="EN-US"><font size="3">8. </font></span></span></b>
+<span style="line-height: 150%"><font size="3">Подсчитать количество 
+положительных и отрицательных элементов файла целых чисел, результаты подсчета 
+вывести на экран и записать в текстовый файл </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">Result</font></span><span style="line-height: 150%"><font size="3">.</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">txt</font></span><span style="line-height: 150%"><font size="3">.</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">Список переменных: </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">f</font></span><span style="line-height: 150%"><font size="3"> 
+– файловая переменная (исходный файл с целыми числами), </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">r</font></span><span style="line-height: 150%"><font size="3"> 
+– файловая переменная (текстовый файл с результатом обработки), </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">buf</font></span><span style="line-height: 150%"><font size="3"> 
+– буферная переменная для временного хранения чисел, </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">name</font></span><span style="line-height: 150%"><font size="3"> 
+– имя файла, </font></span><span lang="EN-US" style="line-height: 150%">
+<font size="3">np</font></span><span style="line-height: 150%"><font size="3"> и
+</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">nn</font></span><span style="line-height: 150%"><font size="3"> 
+– количество положительных и отрицательных элементов исходного файла.</font></span></p>
+<p class="MsoNormal" align="right" style="text-align: right; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="4">Листинг</font></span><span lang="EN-US" style="line-height: 150%"><font size="4"> 
+8</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">program tip_file_4;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">uses crt;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">var &nbsp;&nbsp; f:file of 
+integer; </font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">r:text;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">name:string;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">buf:integer;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">np,nn:byte;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">begin</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">write('</font></span><span style="line-height: 150%"><font size="3">Имя 
+файла</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">:'); 
+read(name);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">//подготовка файлов к работе</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">assign(f,name+'.dat'); 
+reset(f);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">assign(r,'Result.txt'); 
+rewrite(r);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">//</font></span><span style="line-height: 150%"><font size="3">подсчет 
+элементов</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">np:=0; nn:=0;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">while not eof(f) do</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">begin</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">read(f,buf);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">if buf&gt;0 then np:=np+1 
+else nn:=nn+1;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">end</font></span><span style="line-height: 150%"><font size="3">;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">close(f);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">//вывод результатов на экран</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">writeln('Положительных чисел в 
+файле ',name,'.dat:',np);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">writeln('отрицательных чисел в 
+файле ',name,'.dat:',nn);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">//вывод результатов в текстовый 
+файл</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">writeln(r,'Положительных чисел в 
+файле ',name,'.dat:',np);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">writeln(r,'отрицательных чисел в 
+файле ',name,'.dat:',nn);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">close(r)</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">end.</font></span></p>
+
+</body>
+
+</html>

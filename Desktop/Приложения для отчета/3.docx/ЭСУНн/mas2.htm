@@ -1,0 +1,70 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>Описание массивов</title>
+<style>
+<!--
+ p.MsoNormal
+	{mso-style-parent:"";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	}
+-->
+</style>
+</head>
+
+<body>
+
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-bottom: .0001pt">
+<span style="font-size: 14.0pt; line-height: 150%; font-family: 'Times New Roman',serif; font-weight: 700">
+Описание 
+массивов</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-bottom: .0001pt">
+<span style="font-size: 12.0pt; line-height: 150%; font-family: 'Times New Roman',serif">
+Самый простой способ описания массива – это объявить его в разделе var. Описание 
+массива требуется компилятору для выделения памяти под его элементы. Примеры 
+объявления одномерных массивов:</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-bottom: .0001pt">
+<span style="font-size: 12.0pt; line-height: 150%; font-family: 'Times New Roman',serif">
+Var &nbsp;&nbsp;&nbsp;&nbsp; a: array [1 .. 100] of integer; (100 элементов – целые числа)</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-bottom: .0001pt">
+<span style="font-size: 12.0pt; line-height: 150%; font-family: 'Times New Roman',serif">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b: array [0 .. 50] of&nbsp; char;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; (51 элемент – символы)</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-bottom: .0001pt">
+<span style="font-size: 12.0pt; line-height: 150%; font-family: 'Times New Roman',serif">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c: array [-3 .. 4] of&nbsp; boolean;&nbsp;&nbsp; (8 элементов – логические 
+значения)</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-bottom: .0001pt">
+<span style="font-size: 12.0pt; line-height: 150%; font-family: 'Times New Roman',serif">
+Для адресации элементов двумерного массива требуется два индекса – номер строки 
+и номер столбца (размерность массива равна двум). В случае, если в массиве 
+предполагается организовать 3 строки и 4 столбца, то первый индекс принимает 
+значения от 1 до 3, второй индекс может изменяться от 1 до 4. Описание этого 
+массива выглядит следующим образом:</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-bottom: .0001pt">
+<span style="font-size: 12.0pt; line-height: 150%; font-family: 'Times New Roman',serif">
+Var y: array [1..3, 1..4] of integer;</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-bottom: .0001pt">
+<span style="font-size: 12.0pt; line-height: 150%; font-family: 'Times New Roman',serif">
+При выполнении программы вовсе не обязательно заполнять все ячейки данными, т.е. 
+реальное количество элементов в массиве может быть меньше, чем указано при 
+описании, но ни в коем случае не должно быть больше.</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-bottom: .0001pt">
+<span style="font-size: 12.0pt; line-height: 150%; font-family: 'Times New Roman',serif">
+Замечание: при необходимости подсчитать частоту появления в некотором тексте 
+различных букв латинского алфавита, можно воспользоваться вектором счетчиков, 
+индекс которого меняется от ‘a’ до ‘z’, а элементы – целые числа, указывают 
+сколько раз встречается в тексте данная буква.</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-bottom: .0001pt">
+<span style="font-size: 12.0pt; line-height: 150%; font-family: 'Times New Roman',serif">
+Var count: array [‘a’ .. ‘z’] of integer;</span></p>
+
+</body>
+
+</html>

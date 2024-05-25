@@ -1,0 +1,113 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="ru">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>5</title>
+<style>
+<!--
+p.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	}
+ p.MsoNormal
+	{mso-style-parent:"";
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	margin-left:0cm; margin-right:0cm; margin-top:0cm}
+-->
+</style>
+</head>
+
+<body>
+
+<p class="MsoListParagraph" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 0cm">
+<a name="_Toc371883035"><span style="font-size: 14pt"><b>5</b></span><b><span style="font-size: 14.0pt; line-height: 150%">.<span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7.0pt; font-family: Times New Roman">&nbsp;&nbsp;&nbsp;
+</span>Записи с вариантами</span></b></a></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">Записи, имеющие строго 
+определенную структуру, весьма ограничены по возможностям применения. Однако, в 
+языке </font></span><span lang="EN-US" style="line-height: 150%"><font size="3">
+TP</font></span><span style="line-height: 150%"><font size="3"> есть возможность 
+задать тип записи, содержащий несколько вариантов структуры. Такие записи 
+называются записями с вариантами и являются средствами объединения записей, 
+которые похожи, но не идентичны по форме. Записи с вариантами состоят из 
+фиксированной и вариантной частей.</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">Фиксированная часть задается так 
+же, как и в простых записях. Вариантная часть формируется с помощью оператора
+</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">case</font></span><span style="line-height: 150%"><font size="3"> 
+… </font></span><span lang="EN-US" style="line-height: 150%"><font size="3">of</font></span><span style="line-height: 150%"><font size="3"> 
+и может состоять из нескольких вариантов. Оператор задает особое поле записи – 
+поле признака, которое определяет, какой из вариантов в данный момент будет 
+активизирован. Значением признака в каждый текущий момент выполнения программы 
+должна быть одна из расположенных в операторе </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">case</font></span><span style="line-height: 150%"><font size="3"> 
+констант. Константа, служащая признаком, задает вариант записи и называется 
+константой выбора.</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">В любой записи может быть только 
+одна вариантная часть, и, если она есть, она должна располагаться за всеми 
+фиксированными полями. Имена полей должны быть уникальными в пределах той 
+записи, где они объявлены. </font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">Формат записи с вариантами:</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">Type</font></span><span style="line-height: 150%"><font size="3"> 
+ИмяТипа = </font></span><span lang="EN-US" style="line-height: 150%">
+<font size="3">record</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Фиксированная часть</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">Case &nbsp;</font></span><span style="line-height: 150%"><font size="3">ПолеПризнака 
+: ИмяТипа </font></span><span lang="EN-US" style="line-height: 150%">
+<font size="3">of</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+КонстантаВыбора1 : (Поле : Тип, …);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+КонстантаВыбора</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">N</font></span><span style="line-height: 150%"><font size="3"> 
+: (Поле : Тип, …);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">End</font></span><span style="line-height: 150%"><font size="3">;</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">Компоненты каждого варианта 
+(имена полей и их типы) заключаются в круглые скобки. У части </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">case</font></span><span style="line-height: 150%"><font size="3"> 
+нет отдельного </font></span><span lang="EN-US" style="line-height: 150%">
+<font size="3">end</font></span><span style="line-height: 150%"><font size="3">, 
+как этого следовало бы ожидать. Одно слово </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">end</font></span><span style="line-height: 150%"><font size="3"> 
+заканчивает всю конструкцию записи с вариантами. Количество полей каждого из 
+вариантов не ограничено. При использовании записей с вариантами необходимо 
+придерживаться правил:</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 0cm">
+<font size="3"><span style="line-height: 150%; font-family: Symbol">·</span></font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-family: Times New Roman; line-height: 150%"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font></span><span style="line-height: 150%"><font size="3">все имена полей 
+должны отличаться друг от друга, по крайней мере, одним символом, даже если они 
+встречаются в разных вариантах;</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 0cm">
+<font size="3"><span style="line-height: 150%; font-family: Symbol">·</span></font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-family: Times New Roman; line-height: 150%"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font></span><span style="line-height: 150%"><font size="3">запись может иметь 
+только одну вариантную часть, причем вариантная часть должна размещаться в конце 
+записи;</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 0cm">
+<font size="3">
+<span style="line-height: 150%; font-family: Symbol; letter-spacing: .3pt">·</span></font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-family: Times New Roman; line-height: 150%; letter-spacing: .3pt"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font></span><span style="line-height: 150%; letter-spacing: .3pt">
+<font size="3">если вариантная часть, соответствующая какой-либо константе 
+выбора, является пустой, то она записывается следующим образом: КонстантаВыбора</font></span><span lang="EN-US" style="line-height: 150%; letter-spacing: .3pt"><font size="3">N</font></span><span style="line-height: 150%; letter-spacing: .3pt"><font size="3"> 
+( ).</font></span></p>
+
+</body>
+
+</html>

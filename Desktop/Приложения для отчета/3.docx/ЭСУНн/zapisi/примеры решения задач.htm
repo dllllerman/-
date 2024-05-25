@@ -1,0 +1,304 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="ru">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>6</title>
+<style>
+<!--
+p.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	}
+ p.MsoNormal
+	{mso-style-parent:"";
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	margin-left:0cm; margin-right:0cm; margin-top:0cm}
+-->
+</style>
+</head>
+
+<body>
+
+<p class="MsoListParagraph" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 0cm">
+<a name="_Toc371883036"><span style="font-size: 14pt"><b>6</b></span><b><span style="font-size: 14.0pt; line-height: 150%">.<span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7.0pt; font-family: Times New Roman">&nbsp;&nbsp;&nbsp;
+</span>Примеры решения задач</span></b></a></p>
+<p class="MsoNormal" align="center" style="text-align: center; line-height: 150%">
+<b><span style="font-size: 14.0pt; line-height: 150%">Массивы записей</span></b></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<b><span style="line-height: 150%"><font size="3">Условие задачи 1</font></span></b><span style="line-height: 150%"><font size="3">. 
+Заполнить массив данными о книгах магазина (инвентарный номер, автор, название, 
+цена, количество) и вывести полученный массив на экран в виде таблицы с 
+заголовками столбцов.</font></span></p>
+<p class="MsoNormal" align="right" style="text-align: right; text-indent: 35.45pt; line-height: 150%">
+<span style="font-size: 14.0pt; line-height: 150%">Листинг</span><span lang="EN-US" style="font-size: 14.0pt; line-height: 150%"> 
+1</span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">program magazin;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">uses crt;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">const f=5;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">type book=record</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">num:word;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">avtor: string[20];</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">title:string[30];</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">price:real;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">kol:integer;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">end;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">var&nbsp;&nbsp;&nbsp; m:array 
+[1..f] of book;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">i</font></span><span style="line-height: 150%"><font size="3">:</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">integer</font></span><span style="line-height: 150%"><font size="3">;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">begin</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">clrscr</font></span><span style="line-height: 150%"><font size="3">;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">{Заполнение массивами данными о 
+книгах}&nbsp; </font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">for i:=1 to f do</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">begin</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">writeln</font></span><span style="line-height: 150%"><font size="3">('Введите 
+сведения о книгах');</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">writeln('</font></span><span style="line-height: 150%"><font size="3">Книга</font></span><span lang="EN-US" style="line-height: 150%"><font size="3"> 
+',i,':');</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">write('</font></span><span style="line-height: 150%"><font size="3">Инвентарный 
+номер</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">-&gt;');read(m[i].num);
+</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">write('</font></span><span style="line-height: 150%"><font size="3">Автор</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">-&gt;');read(m[i].avtor);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">write('</font></span><span style="line-height: 150%"><font size="3">Название</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">-&gt;');read(m[i].title);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">write('</font></span><span style="line-height: 150%"><font size="3">Цена</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">-&gt;');read(m[i].price);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">write('</font></span><span style="line-height: 150%"><font size="3">Количество</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">-&gt;');read(m[i].kol);
+</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span style="line-height: 150%"><font size="3">end;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">{Вывод на экран содержимого 
+таблицы}</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">clrscr;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">textcolor(12);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">writeln('Сведения о наличии книг 
+в магазине');</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">textcolor(2);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">writeln('Инв.номер':10,'Автор':15,'Название':15,'Цена':8,'Кол-во':8);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">textcolor(15);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">for i:=1 to f do</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">begin</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt; background: #D9D9D9">
+<span lang="EN-US" style="line-height: 150%"><font size="3">{writeln(m[i].num:10,m[i].avtor:15,</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt; background: #D9D9D9">
+<span lang="EN-US" style="line-height: 150%"><font size="3">m[i].title:15,m[i].price:8:2,m[i].kol:8);}</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">with m[i] do</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 70.75pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">
+writeln(num:10,avtor:15,title:15,price:8:2,kol:8);</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%; margin-left: 35.3pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">end</font></span><span style="line-height: 150%"><font size="3">;</font></span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">end</font></span><span style="line-height: 150%"><font size="3">.</font></span></p>
+<p class="MsoNormal" align="center" style="text-align: center; line-height: 150%">
+<b><span style="font-size: 14.0pt; line-height: 150%">Файлы записей</span></b></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<b><span style="line-height: 150%"><font size="3">Условие задачи 1</font></span></b><span style="line-height: 150%"><font size="3">. 
+Создать на диске файл с именем </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">magazin</font></span><span style="line-height: 150%"><font size="3">.</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">dat</font></span><span style="line-height: 150%"><font size="3"> 
+и записать в него сведения о книгах магазина (инвентарный номер, автор, 
+название, цена, количество экземпляров). Конец записи – инвентарный номер равный 
+0. Вывести на экран содержимое этого файла в виде таблицы.</font></span></p>
+<p class="MsoNormal" align="center" style="text-align: center; line-height: 150%">
+<u><span style="font-size: 14.0pt; line-height: 150%">Заполнение файла данными</span></u></p>
+<p class="MsoNormal" align="right" style="text-align: right; text-indent: 35.45pt; line-height: 150%">
+<span style="font-size: 14.0pt; line-height: 150%">Листинг 2</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">program magazine_1;</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">uses crt;</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">type&nbsp; book=record</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">num:word;</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">avtor: string[20];</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">title:string[20];</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">price:real;</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">kol:integer;</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">end;</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">var&nbsp;&nbsp;&nbsp; buf:book;</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">name:string[12];</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">f:file of book;</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">begin</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">clrscr;</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">write('</font></span><span style="line-height: 150%"><font size="3">Имя 
+файла</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">:');</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">read(name);</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">assign(f,name+’.dat’);</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">rewrite</font></span><span style="line-height: 150%"><font size="3">(</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">f</font></span><span style="line-height: 150%"><font size="3">);</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">repeat</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">writeln</font></span><span style="line-height: 150%"><font size="3">('Введите 
+сведения о книгах');</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">with buf do</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">begin</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">write('</font></span><span style="line-height: 150%"><font size="3">Инв</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">.</font></span><span style="line-height: 150%"><font size="3">номер</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">:'); 
+read(num);</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">if num&lt;&gt;0 then</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 70.75pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">begin</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 70.75pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">write('</font></span><span style="line-height: 150%"><font size="3">Автор</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">-&gt;');read(avtor);</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 70.75pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">write('</font></span><span style="line-height: 150%"><font size="3">Название</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">-&gt;');read(title);</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 70.75pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">write('</font></span><span style="line-height: 150%"><font size="3">Цена</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">-&gt;');read(price);</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 70.75pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">write</font></span><span style="line-height: 150%"><font size="3">('Количество-&gt;');</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">read</font></span><span style="line-height: 150%"><font size="3">(</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">kol</font></span><span style="line-height: 150%"><font size="3">);</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 70.75pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">write(f,buf);</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 70.75pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">end;</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 35.3pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">end;</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">clrscr;</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">until buf.num=0;</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">writeln('</font></span><span style="line-height: 150%"><font size="3">Запись 
+в файл завершена</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">');</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">close</font></span><span style="line-height: 150%"><font size="3">(</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">f</font></span><span style="line-height: 150%"><font size="3">);</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">end</font></span><span style="line-height: 150%"><font size="3">.</font></span></p>
+<p class="MsoNormal" align="center" style="text-align: center; line-height: 150%">
+<u><span style="line-height: 150%"><font size="3">Вывод на экран содержимого 
+файла в виде таблицы</font></span></u></p>
+<p class="MsoNormal" align="right" style="text-align: right; text-indent: 35.45pt; line-height: 150%">
+<span style="font-size: 14.0pt; line-height: 150%">Листинг</span><span lang="EN-US" style="font-size: 14.0pt; line-height: 150%"> 
+3</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">program magazine_2;</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">uses crt;</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">type&nbsp; book=record</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">num:word;</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">avtor, title: 
+string[20];</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">price:real;</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">kol:integer;</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">end;</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">var&nbsp;&nbsp;&nbsp; buf:book;</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">name:string[12];</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">f:file of book;</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">begin</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">clrscr;</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">write('</font></span><span style="line-height: 150%"><font size="3">Имя 
+файла</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">-&gt;');</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">read(name);</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">
+assign(f,name+’.dat’);</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">reset</font></span><span style="line-height: 150%"><font size="3">(</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">f</font></span><span style="line-height: 150%"><font size="3">);</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">textcolor</font></span><span style="line-height: 150%"><font size="3">(12);</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">writeln('Сведения о наличии книг 
+в магазине');</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">textcolor(2);</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">writeln('Инв.номер':10,'Автор':15,'Название':15,'Цена':8,'Кол-во':8);</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">textcolor(15);</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">while not eof(f) do</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">begin</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 35.35pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">with buf do</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 70.75pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">begin</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 70.75pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">read(f,buf);</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 70.75pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">
+writeln(num:10,avtor:15,title:15,price:8:2,kol:8);</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 70.75pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">end;</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 35.3pt">
+<span lang="EN-US" style="line-height: 150%"><font size="3">end;</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">writeln('</font></span><span style="line-height: 150%"><font size="3">Все</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">!!!');</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">close</font></span><span style="line-height: 150%"><font size="3">(</font></span><span lang="EN-US" style="line-height: 150%"><font size="3">f</font></span><span style="line-height: 150%"><font size="3">);</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">end</font></span><span style="line-height: 150%"><font size="3">.</font></span></p>
+
+</body>
+
+</html>

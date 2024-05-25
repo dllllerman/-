@@ -1,0 +1,64 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>Описание границ массива</title>
+<style>
+<!--
+p.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	}
+ p.MsoNormal
+	{mso-style-parent:"";
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	margin-left:0cm; margin-right:0cm; margin-top:0cm}
+-->
+</style>
+</head>
+
+<body>
+
+<p class="MsoListParagraph" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 0cm">
+<a name="_Toc371882993"><b><span style="font-style: normal; font-variant: normal; font-weight: normal; line-height: 150%"><font size="4">
+&nbsp;</font></span><span style="font-size: 14.0pt; line-height: 150%"><font size="4"><span style="line-height: 150%">Описание границ массива</span></font></span></b></a></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">При объявлении массива нельзя 
+задавать границы индексов при помощи переменных. Память под мас</font></span><span style="line-height: 150%"><font size="3">сив 
+выделяется компилятором до выполнения программы, а переменные получают значения 
+только в ходе ее выполнения.</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">При описании массива удобно 
+использовать предварительно определенные именованные константы, которые задают 
+количество элементов. Тогда в случае изменения размеров массива не нужно будет 
+вносить исправления по всему тексту программы, достаточно только один раз 
+изменить значение именованной константы.</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">Например, опишем двумерный 
+вещественный массив </font></span><span lang="EN-US" style="line-height: 150%">
+<font size="3">matrix</font></span><span style="line-height: 150%"><font size="3">, 
+в котором число строк </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">maxrow</font></span><span style="line-height: 150%"><font size="3">, 
+а число столбцов – </font></span><span lang="EN-US" style="line-height: 150%">
+<font size="3">maxcol</font></span><span style="line-height: 150%"><font size="3">:</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">Const</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Maxrow = 
+10; maxcol = 15;</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">Var</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="line-height: 150%"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Matrix: 
+array [1..maxrow, 1..maxcol] of real;</font></span></p>
+
+</body>
+
+</html>

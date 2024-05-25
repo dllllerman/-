@@ -1,0 +1,92 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="ru">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>7</title>
+<style>
+<!--
+p.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	}
+ p.MsoNormal
+	{mso-style-parent:"";
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	margin-left:0cm; margin-right:0cm; margin-top:0cm}
+-->
+</style>
+</head>
+
+<body>
+
+<p class="MsoListParagraph" style="text-align: justify; text-indent: 35.45pt; line-height: 150%; margin-left: 0cm">
+<a name="_Toc371883026"><span style="font-size: 14pt"><b>7</b></span><b><span style="font-size: 14.0pt; line-height: 150%">.<span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7.0pt; font-family: Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Типизированные файлы</span></b></a></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">Для хранения однородной 
+информации, например, только числовых данных определенного типа, использование 
+текстового файла является невыгодным. Компьютер непродуктивно тратит ресурсы на 
+постоянное преобразование данных из символьного вида в двоичный и обратно, эти 
+преобразования могут привести к ошибкам округления, часто требуется отслеживать 
+признаки конца строки, доступ выполняется последовательно, а значит медленно, 
+объем файла велик.</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="line-height: 150%"><font size="3">Типизированный файл состоит из 
+последовательности элементов одного типа и длины. Их число и, следовательно, 
+размер файла не ограничивается при его задании. Каждый элемент файла имеет свой 
+номер. Первый элемент считается нулевым. В каждый момент времени программа 
+доступен только один текущий элемент, на который установлен указатель файла. 
+После выполнения операции чтения или записи для элемента </font></span>
+<span lang="EN-US" style="line-height: 150%"><font size="3">N</font></span><span style="line-height: 150%"><font size="3">, 
+указатель автоматически смещается к следующему по порядку элементу </font>
+</span><span lang="EN-US" style="line-height: 150%"><font size="3">N</font></span><span style="line-height: 150%"><font size="3">+1, 
+который в свою очередь, становится доступным для чтения или записи.</font></span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<font size="3"><span style="line-height: 150%">Обратите внимание – так как все 
+элементы файла имеют одинаковую длину, позиция каждого элемента легко 
+вычисляется. Поэтому указатель может быть перемещен на любой элемент файла, 
+обеспечивая к нему прямой доступ. Фактич</span></font><span style="font-size: 14.0pt; line-height: 150%">ески 
+типизированный файл – это массив на диске с неограниченным размером и 
+сравнительно невысокой скоростью обработки. Очень часто в качестве элементов 
+типизированного файла выступают записи, что позволяет программисту работать с 
+базами данных.</span></p>
+<p class="MsoNormal" style="text-align: justify; text-indent: 35.45pt; line-height: 150%">
+<span style="font-size: 14.0pt; line-height: 150%">В отличие от текстового файла 
+типизированный файл не делится на строки. Данные в нем изначально записаны во 
+внутреннем двоичном представлении компьютера – в виде, в котором они хранятся в 
+оперативной памяти. Непосредственный просмотр такого файла не позволит 
+пользователю разобраться в его содержимом. Для этого необходимо предварительно 
+знать формат хранения данных и уметь обрабатывать его при помощи программы
+</span><span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">TP</span><span style="font-size: 14.0pt; line-height: 150%">.</span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span style="font-size: 14.0pt; line-height: 150%">Объявление типизированных 
+файлов:</span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">Type</span><span style="font-size: 14.0pt; line-height: 150%"> 
+ИмяТипа = </span>
+<span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">file</span><span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">
+</span><span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">of</span><span style="font-size: 14.0pt; line-height: 150%"> 
+Тип;</span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">Var</span><span style="font-size: 14.0pt; line-height: 150%"> 
+ФайловаяПеременная : ИмяТипа;</span></p>
+<p class="MsoNormal" style="line-height: 150%">
+<span style="font-size: 14.0pt; line-height: 150%">или</span></p>
+<p class="MsoNormal" style="text-indent: 35.45pt; line-height: 150%">
+<span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">Var</span><span style="font-size: 14.0pt; line-height: 150%"> 
+ФайловаяПеременная : </span>
+<span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">file</span><span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">
+</span><span lang="EN-US" style="font-size: 14.0pt; line-height: 150%">of</span><span style="font-size: 14.0pt; line-height: 150%"> 
+Тип;</span></p>
+
+</body>
+
+</html>
